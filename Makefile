@@ -1,5 +1,5 @@
 IMAGE_NAME=demo-api-random
-IMAGE_VERSION=0.3.0
+IMAGE_VERSION=0.4.0-dev
 DEPLOY_REPO=docker.pkg.github.com/dedickinson/demo-api-random
 
 all: kube-deploy
