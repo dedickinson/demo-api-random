@@ -1,6 +1,6 @@
 # Demo API - Random
 
-A super basic [Flask-based API](https://palletsprojects.com/p/flask/) 
+A super basic [Flask-based API](https://palletsprojects.com/p/flask/)
 that just produces out a random number.
 
 Run up minikube and then get started with:
@@ -20,5 +20,5 @@ To install `make` on Windows:
 ## References
 
 * [Connection refused? Docker networking and how it impacts your image](https://pythonspeed.com/articles/docker-connection-refused/)
-is a great article about docker networking. 
+is a great article about docker networking.
   * If you're using minikube make sure you run `minikube ip`

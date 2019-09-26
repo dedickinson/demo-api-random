@@ -10,4 +10,4 @@ spec:
   - port: 5000
     protocol: TCP
   selector:
-    app: random-api 
+    app: random-api
