@@ -1,4 +1,5 @@
 IMAGE_NAME=demo-api-random
+IMAGE_VERSION=0.1.0
 
 all: kube-deploy
 .PHONY: all run-local Dockerfile docker-run docker-stop docker-start docker-delete docker-logs docker-clean kube-deploy kube-apply kube-clean cleanall
@@ -16,7 +17,8 @@ Pipfile.lock:
 	pipenv check
 
 Dockerfile: Pipfile.lock requirements.txt
-	docker build --tag $(IMAGE_NAME) .
+	docker build --tag $(IMAGE_NAME):$(IMAGE_VERSION) .
+	docker build --tag $(IMAGE_NAME):latest .
 
 docker-run: Dockerfile
 	docker run --detach --name $(IMAGE_NAME) --publish 5000:5000 $(IMAGE_NAME)
@@ -34,6 +36,7 @@ docker-logs:
 	docker logs $(IMAGE_NAME)
 
 docker-clean: docker-delete
+	-docker rmi $(IMAGE_NAME):$(IMAGE_VERSION)
 	-docker rmi $(IMAGE_NAME)
 
 kube-deploy: Dockerfile
