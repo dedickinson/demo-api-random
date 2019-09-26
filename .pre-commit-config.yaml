@@ -9,8 +9,7 @@ repos:
 - repo: local
   hooks:
     - id: requirements
-      name: Create requirements.txt
+      name: Check dependencies
       language: system
       entry: |
         pipenv check
-        pipenv lock -r >requirements.txt
