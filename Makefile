@@ -2,7 +2,7 @@ IMAGE_NAME=demo-api-random
 IMAGE_VERSION=0.1.0
 
 all: kube-deploy
-.PHONY: all pre-commit run-local Dockerfile docker-run docker-stop docker-start docker-delete docker-logs docker-clean kube-deploy kube-apply kube-clean cleanall
+.PHONY: all pre-commit requirements.txt run-local Dockerfile docker-run docker-stop docker-start docker-delete docker-logs docker-clean kube-deploy kube-apply kube-clean cleanall
 .DEFAULT: all
 
 run-local:
