@@ -11,4 +11,6 @@ repos:
     - id: requirements
       name: Create requirements.txt
       language: system
-      entry: make requirements.txt
+      entry: |
+        pipenv check
+        pipenv lock -r >requirements.txt
