@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: random-api-service
+  labels:
+    run: random-api-service
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    protocol: TCP
+  selector:
+    app: random-api 

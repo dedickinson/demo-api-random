@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+README.md
+Makefile
+Pipfile
+Pipfile.lock
