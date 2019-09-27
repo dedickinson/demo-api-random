@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-api-random
-        image: demo-api-random:0.1.0
+        image: demo-api-random:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
